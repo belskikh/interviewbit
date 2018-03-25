@@ -5,7 +5,7 @@ int main() {
 
     int m = 4;
     int n = 4;
-    
+
     int inp[4][4] = {{1,  2,  3,  4},
                      {5,  6,  7,  8},
                      {9,  10, 11, 12},
@@ -21,24 +21,28 @@ int main() {
                 }
                 T++;
                 dir = 1;
+                break;
             case 1:
                 for (int i = T; i <= B; i++) {
                     cout << inp[i][R] << " ";
                 }
                 R--;
                 dir = 2;
+                break;
             case 2:
                 for (int i = R; i >= L; i--) {
                     cout << inp[B][i] << " ";
                 }
                 B--;
                 dir = 3;
+                break;
             case 3:
                 for (int i = B; i >= T; i--) {
                     cout << inp[i][L] << " ";
                 }
                 L++;
                 dir = 0;
+                break;
         }
 
     }
